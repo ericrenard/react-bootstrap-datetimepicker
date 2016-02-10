@@ -129,6 +129,7 @@ class DateTimePicker extends Component {
         ]),
         mode             : React.PropTypes.oneOf([MODE_DATE, MODE_TIME, MODE_DATETIME]),
         onChange         : React.PropTypes.func,
+        onBlur           : React.PropTypes.func,
         placeholder      : React.PropTypes.string,
         showClear        : React.PropTypes.bool,
         showClose        : React.PropTypes.bool,
@@ -180,6 +181,7 @@ class DateTimePicker extends Component {
         locale              : moment.locale(),
         mode                : MODE_DATETIME,
         onChange            : () => {},
+        onBlur              : () => {},
         placement           : PLACEMENT_BOTTOM,
         showToday           : true,
         stepping            : 1,
@@ -385,7 +387,7 @@ class DateTimePicker extends Component {
                                            selected={ selected }
                                            dateTime={ dateTime }
                                            container={ widgetParent }
-                                           onChange={ this.onChangeInput }
+                                           onChange={ this.onChangeInput }                                           
                                            onClickToday={ this.onClickToday }
                                            onClickClear={ this.onClickClear }
                                            datePicker={ this.renderDatePicker() }

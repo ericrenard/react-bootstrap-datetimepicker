@@ -69,6 +69,7 @@ class DateTimePickerInput extends Component {
                        ref="input"
                        value={ value }
                        onChange={ this.onChangeInput }
+                       onBlur={this.props.onBlur}
                        { ...inputProps } />
 
                 <span className="input-group-addon"
