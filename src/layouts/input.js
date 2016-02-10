@@ -92,7 +92,7 @@ class DateTimePickerLayoutInput extends Component {
             <div style={ { position : "relative" } }>
                 <DateTimePickerInput { ...this.props }
                                      show={ show }
-                                     ref="input"
+                                     ref="input"                                     
                                      onClick={ this.onClickInput } />
                 <Overlay placement="bottom"
                          show={ show }
